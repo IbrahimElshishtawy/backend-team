@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tech Store</title>
+<title>المنتجات</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,15 +17,16 @@
     </nav>
 </header>
 
-<section class="hero">
-    <h2>أحدث الأجهزة بأفضل الأسعار</h2>
-    <p>تجربة تسوق احترافية بتصميم عصري</p>
-    <a href="products.html" class="btn">تسوق الآن</a>
-</section>
+<section class="products" id="productList"></section>
 
-<footer>
-    © 2026 Tech Store
-</footer>
+<!-- Cart Modal -->
+<div class="cartModal" id="cartModal">
+    <div class="cartContent">
+        <h2>سلة المشتريات</h2>
+        <div id="cartItems"></div>
+        <button onclick="closeCart()">إغلاق</button>
+    </div>
+</div>
 
 <script src="script.js"></script>
 </body>
