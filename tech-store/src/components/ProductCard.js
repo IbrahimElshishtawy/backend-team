@@ -3,17 +3,17 @@ function ProductCard({ product }) {
     fetch("/api/cart", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(product)
+      body: JSON.stringify(product),
     })
-    .then(res => res.json())
-    .then(data => console.log("Cart updated:", data.cart));
+      .then((res) => res.json())
+      .then((data) => console.log("Cart updated:", data.cart));
   };
 
   return (
     <div className="card">
       <h3>{product.name}</h3>
       <p>{product.price} EGP</p>
-      <button onClick={addToCart}>شراء</button>
+      <button onClick={addToCart}>أضف إلى السلة</button>
     </div>
   );
 }
